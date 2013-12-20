@@ -1,0 +1,29 @@
+{
+	"name": "app",
+	"repositories": [
+		{
+			"type": "pear",
+			"url": "http://pear.cakephp.org"
+		}
+	],
+	"require": {
+		"composer/installers": "dev-master",
+		"pear-cakephp/cakephp": ">=2.4.0",
+		"components/jquery": "1.*",
+		"twitter/bootstrap": "3.*",
+		"slywalker/boost_cake": "*",
+		"fortawesome/font-awesome": "4.*"
+	},
+	"require-dev": {
+		"cakephp/debug_kit": "2.2.*"
+	},
+	"config": {
+		"vendor-dir": "lib/",
+		"component-dir": "lib/components"
+	},
+	"extra": {
+		"installer-paths": {
+			"app/Plugin/{$name}/": ["type:cakephp-plugin"]
+		}
+	}
+}

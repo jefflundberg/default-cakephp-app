@@ -1,0 +1,21 @@
+{
+	"name" : "DefaultApp",
+	"version" : "0.1.0",
+	"author" : "Jeff Lundberg",
+	"private" : true,
+
+	"devDependencies" : {
+		"grunt" : 					"~0.4.1",
+		"grunt-contrib-cssmin":		"*",
+		"grunt-contrib-less":		"*",
+		"grunt-contrib-uglify":		"*",
+		"grunt-contrib-jshint":		"*",
+		"grunt-contrib-watch":		"*",
+		"grunt-smushit":			"*",
+		"grunt-cssc":				"*",
+		"grunt-htmlhint":			"*",
+		"grunt-phplint":			"*",
+		"grunt-copy-to":			"*",
+		"matchdep":					"*"
+	}
+}
