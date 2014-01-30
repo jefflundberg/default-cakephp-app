@@ -12,10 +12,11 @@
 		"components/jquery": "1.*",
 		"twitter/bootstrap": "3.*",
 		"slywalker/boost_cake": "*",
-		"fortawesome/font-awesome": "4.*"
+		"fortawesome/font-awesome": "4.*",
+		"components/backbone": "1.*"
 	},
 	"require-dev": {
-		"cakephp/debug_kit": "2.2.*"
+		"cakephp/debug_kit": "2.*"
 	},
 	"config": {
 		"vendor-dir": "lib/",

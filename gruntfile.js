@@ -38,7 +38,7 @@ module.exports = function(grunt){
 		uglify: {
 			build: {
 				files: {
-					'app/webroot/js/base.min.js': ['lib/components/jquery/jquery.js', 'lib/twitter/bootstrap/dist/js/bootstrap.js', 'app/webroot/js/base.js']
+					'app/webroot/js/base.min.js': ['lib/components/jquery/jquery.js', 'lib/twitter/bootstrap/dist/js/bootstrap.js', 'lib/components/underscore/underscore-min.js', 'lib/components/backbone/backbone-min.js', 'app/webroot/js/base.js']
 				}
 			}
 		},
@@ -47,7 +47,8 @@ module.exports = function(grunt){
 		less: {
 			development: {
 				options: {
-
+					sourceMap: true,
+                    sourceMapFilename: 'app/webroot/css/cake.dev.css.map'
 				},
 					files: {
 						"app/webroot/css/cake.dev.css": "lib/twitter/bootstrap/less/bootstrap.less"
