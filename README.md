@@ -7,6 +7,8 @@ This repo is a starting point for a CakePHP app. Here’s what you get:
 * Bootstrap
 * Font Awesome
 * jQuery
+* Underscore
+* Backbone
 * Grunt
     * jshint & uglify for JavaScript debugging, compression, and optimization
     * LESS with Source Maps (see [Tuts+ Tutorial](http://net.tutsplus.com/tutorials/tools-and-tips/working-with-less-and-the-chrome-devtools/)) for Chrome Dev Tools debugging and CSS compression
