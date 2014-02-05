@@ -87,6 +87,15 @@ class AppController extends Controller {
 	);
 ```
 
+* Set the bootstrap template as the default: Edit /app/controllers/AppController.php. Add the following in the AppController class
+
+```php
+    function beforeFilter() {
+        parent::beforeFilter();
+        $this->layout = 'bootstrap';
+    }
+```
+
 ### Grunt
 
 
