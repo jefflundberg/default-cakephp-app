@@ -36,22 +36,13 @@
 			echo "<?php endforeach; ?>\n";
 			?>
 			</table>
-			<p>
-			<?php echo "<?php
-			echo \$this->Paginator->counter(array(
-			'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-			));
-			?>"; ?>
+			<?php echo "\n\t\t\t<?php \$params = \$this->Paginator->params();
+				if (\$params['pageCount'] > 1): ?>
+			<p class=\"muted\">
+				<?php echo \$this->Paginator->counter(array('format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}'))); ?>
 			</p>
-			<div class="paging">
-			<?php
-				echo "<?php\n";
-				echo "\t\techo \$this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));\n";
-				echo "\t\techo \$this->Paginator->numbers(array('separator' => ''));\n";
-				echo "\t\techo \$this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));\n";
-				echo "\t?>\n";
-			?>
-			</div>
+			<?php endif; ?>\n"; ?>
+			<?php echo "\n\t\t\t<?php echo \$this->Paginator->pagination(); ?>\n"; ?>
 		</div>
 		<div class="actions">
 			<h3><?php echo "<?php echo __('Actions'); ?>"; ?></h3>
