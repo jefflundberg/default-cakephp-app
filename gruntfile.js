@@ -48,10 +48,10 @@ module.exports = function(grunt){
 			development: {
 				options: {
 					sourceMap: true,
-                    sourceMapFilename: 'app/webroot/css/cake.dev.css.map'
+					sourceMapFilename: 'app/webroot/css/cake.dev.css.map'
 				},
 					files: {
-						"app/webroot/css/cake.dev.css": "lib/twitter/bootstrap/less/bootstrap.less"
+						"app/webroot/css/cake.dev.css": ["lib/twitter/bootstrap/less/bootstrap.less", "lib/fortawesome/font-awesome/less/font-awesome.less"]
 				}
 			},
 			production: {
@@ -60,7 +60,7 @@ module.exports = function(grunt){
 					cleancss: true
 				},
 					files: {
-						"app/webroot/css/cake.min.css": "lib/twitter/bootstrap/less/bootstrap.less"
+						"app/webroot/css/cake.min.css": ["lib/twitter/bootstrap/less/bootstrap.less", "lib/fortawesome/font-awesome/less/font-awesome.less"]
 				}
 			}
 		},
@@ -77,7 +77,6 @@ module.exports = function(grunt){
 		copyto: {
 			fontawesome: {
 				files: [
-					{cwd: 'lib/fortawesome/font-awesome/', src: 'css/*.css', dest: 'app/webroot/'},
 					{cwd: 'lib/fortawesome/font-awesome/', src: 'fonts/*.*', dest: 'app/webroot/'}
 				]
 			}
