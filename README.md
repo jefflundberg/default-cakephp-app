@@ -68,7 +68,7 @@ spl_autoload_register(array('App', 'load'), true, true);
 
 ```php
 class AppController extends Controller {
-	public $components = array('DebugKit.Toolbar');
+	public $components = array('DebugKit.Toolbar', 'Session');
 }
 ```
 
