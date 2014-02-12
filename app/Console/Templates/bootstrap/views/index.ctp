@@ -48,9 +48,9 @@
 				}
 
 				echo "\t\t<td class=\"actions\">\n";
-				echo "\t\t\t<?php echo \$this->Html->link(__('View'), array('action' => 'view', \${$singularVar}['{$modelClass}']['{$primaryKey}']), array('class' => 'btn btn-default')); ?>\n";
-				echo "\t\t\t<?php echo \$this->Html->link(__('Edit'), array('action' => 'edit', \${$singularVar}['{$modelClass}']['{$primaryKey}']), array('class' => 'btn btn-default')); ?>\n";
-				echo "\t\t\t<?php echo \$this->Form->postLink(__('Delete'), array('action' => 'delete', \${$singularVar}['{$modelClass}']['{$primaryKey}']), array('class' => 'btn btn-default'), __('Are you sure you want to delete # %s?', \${$singularVar}['{$modelClass}']['{$primaryKey}'])); ?>\n";
+				echo "\t\t\t<?php echo \$this->Html->link(__('<i class=\"fa fa-file-text-o\"></i> View'), array('action' => 'view', \${$singularVar}['{$modelClass}']['{$primaryKey}']), array('class' => 'btn btn-primary btn-xs', 'escape' => false)); ?>\n";
+				echo "\t\t\t<?php echo \$this->Html->link(__('<i class=\"fa fa-pencil\"></i> Edit'), array('action' => 'edit', \${$singularVar}['{$modelClass}']['{$primaryKey}']), array('class' => 'btn btn-default btn-xs', 'escape' => false)); ?>\n";
+				echo "\t\t\t<?php echo \$this->Form->postLink(__('<i class=\"fa fa-trash-o\"></i> Delete'), array('action' => 'delete', \${$singularVar}['{$modelClass}']['{$primaryKey}']), array('class' => 'btn btn-danger btn-xs', 'escape' => false), __('Are you sure you want to delete # %s?', \${$singularVar}['{$modelClass}']['{$primaryKey}'])); ?>\n";
 				echo "\t\t</td>\n";
 			echo "\t</tr>\n";
 
