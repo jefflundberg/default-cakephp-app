@@ -9,7 +9,7 @@
 		<meta name=description content="">
 		<meta name=viewport content="width=device-width, initial-scale=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- Bootstrap CSS -->
+		<!-- CSS -->
 		<link href="/css/cake.dev.css" rel="stylesheet" media="screen">
 		<?php
 			echo $this->Html->meta('icon');
@@ -30,7 +30,7 @@
 			</div>
 		</div>
 		<?php echo $this->element('sql_dump'); ?>
-		<!-- Bootstrap JavaScript -->
+		<!-- JavaScript -->
 		<script src="/js/base.min.js"></script>
 	</body>
 </html>
