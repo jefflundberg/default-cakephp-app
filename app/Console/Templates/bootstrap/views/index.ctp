@@ -3,22 +3,28 @@
 
 			<div class="actions btn-toolbar">
 				<div class="btn-group">
-					<?php echo "<?php echo \$this->Html->link(__('New " . $singularHumanName . "'), array('action' => 'add'), array('class' => 'btn btn-default')); ?>"; ?>
+					<?php echo "<?php echo \$this->Html->link(__('<i class=\"fa fa-plus\"></i> New " . $singularHumanName . "'), array('action' => 'add'), array('class' => 'btn btn-default', 'escape' => false)); ?>"; ?>
 				</div>
-				<div class="btn-group">
+
 					<?php
 						$done = array();
 						foreach ($associations as $type => $data) {
 							foreach ($data as $alias => $details) {
+					?>
+					<div class="btn-group">
+					<?php
 								if ($details['controller'] != $this->name && !in_array($details['controller'], $done)) {
-									echo "\t\t\t\t<?php echo \$this->Html->link(__('List " . Inflector::humanize($details['controller']) . "'), array('controller' => '{$details['controller']}', 'action' => 'index'), array('class' => 'btn btn-default')); ?>\n";
-									echo "\t\t\t\t<?php echo \$this->Html->link(__('New " . Inflector::humanize(Inflector::underscore($alias)) . "'), array('controller' => '{$details['controller']}', 'action' => 'add'), array('class' => 'btn btn-default')); ?>\n";
+									echo "\t\t\t\t<?php echo \$this->Html->link(__('<i class=\"fa fa-th-list\"></i> List " . Inflector::humanize($details['controller']) . "'), array('controller' => '{$details['controller']}', 'action' => 'index'), array('class' => 'btn btn-default', 'escape' => false)); ?>\n";
+									echo "\t\t\t\t<?php echo \$this->Html->link(__('<i class=\"fa fa-plus\"></i> New " . Inflector::humanize(Inflector::underscore($alias)) . "'), array('controller' => '{$details['controller']}', 'action' => 'add'), array('class' => 'btn btn-default', 'escape' => false)); ?>\n";
 									$done[] = $details['controller'];
 								}
+					?>
+					</div>
+					<?php
 							}
 						}
 					?>
-				</div>
+
 			</div>
 
 			<table cellpadding="0" cellspacing="0" class="table table-striped table-hover" style="margin-top:20px;">
