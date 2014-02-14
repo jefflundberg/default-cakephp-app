@@ -53,12 +53,12 @@
 			$this-><?php echo $currentModelName; ?>->create();
 			if ($this-><?php echo $currentModelName; ?>->save($this->request->data)) {
 <?php if ($wannaUseSession): ?>
-				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> has been saved.'), 'default', array('class' => 'alert alert-success'));
+				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> has been saved.'), 'alert', array('class' => 'alert alert-success', 'plugin' => 'BoostCake'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-warning'));
+				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> could not be saved. Please, try again.'), 'alert', array('class' => 'alert alert-warning', 'plugin' => 'BoostCake'));
 <?php else: ?>
-				return $this->flash(__('The <?php echo strtolower($singularHumanName); ?> has been saved.'), array('action' => 'index', 'class' => 'alert alert-success'));
+				return $this->flash(__('The <?php echo strtolower($singularHumanName); ?> has been saved.'), array('action' => 'index', 'class' => 'alert alert-success', 'plugin' => 'BoostCake'));
 <?php endif; ?>
 			}
 		}
@@ -94,12 +94,12 @@
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this-><?php echo $currentModelName; ?>->save($this->request->data)) {
 <?php if ($wannaUseSession): ?>
-				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> has been saved.'), 'default', array('class' => 'alert alert-success'));
+				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> has been saved.'), 'alert', array('class' => 'alert alert-success', 'plugin' => 'BoostCake'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-warning'));
+				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> could not be saved. Please, try again.'), 'alert', array('class' => 'alert alert-warning', 'plugin' => 'BoostCake'));
 <?php else: ?>
-				return $this->flash(__('The <?php echo strtolower($singularHumanName); ?> has been saved.'), array('action' => 'index', 'class' => 'alert alert-success'));
+				return $this->flash(__('The <?php echo strtolower($singularHumanName); ?> has been saved.'), array('action' => 'index', 'class' => 'alert alert-success', 'plugin' => 'BoostCake'));
 <?php endif; ?>
 			}
 		} else {
@@ -138,15 +138,15 @@
 		$this->request->onlyAllow('post', 'delete');
 		if ($this-><?php echo $currentModelName; ?>->delete()) {
 <?php if ($wannaUseSession): ?>
-			$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> has been deleted.'), 'default', array('class' => 'alert alert-success'));
+			$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> has been deleted.'), 'alert', array('class' => 'alert alert-success', 'plugin' => 'BoostCake'));
 		} else {
-			$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> could not be deleted. Please, try again.'), 'default', array('class' => 'alert alert-warning'));
+			$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> could not be deleted. Please, try again.'), 'alert', array('class' => 'alert alert-warning', 'plugin' => 'BoostCake'));
 		}
 		return $this->redirect(array('action' => 'index'));
 <?php else: ?>
-			return $this->flash(__('The <?php echo strtolower($singularHumanName); ?> has been deleted.'), array('action' => 'index', 'class' => 'alert alert-success'));
+			return $this->flash(__('The <?php echo strtolower($singularHumanName); ?> has been deleted.'), array('action' => 'index', 'class' => 'alert alert-success', 'plugin' => 'BoostCake'));
 		} else {
-			return $this->flash(__('The <?php echo strtolower($singularHumanName); ?> could not be deleted. Please, try again.'), array('action' => 'index', 'class' => 'alert alert-warning'));
+			return $this->flash(__('The <?php echo strtolower($singularHumanName); ?> could not be deleted. Please, try again.'), array('action' => 'index', 'class' => 'alert alert-warning', 'plugin' => 'BoostCake'));
 		}
 <?php endif; ?>
 	}
