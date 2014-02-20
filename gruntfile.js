@@ -89,7 +89,7 @@ module.exports = function(grunt){
 
 		//PHP
 		phplint: {
-			all: ['Config/*.php', 'Console/*.php', 'Model/*.php', 'View/*.php']
+			all: ['Config/*.php', 'Console/*.php', 'Model/*.php', 'View/*.php', 'Controllers/*.php']
 		}
 
 
