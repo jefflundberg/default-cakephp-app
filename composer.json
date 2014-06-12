@@ -1,14 +1,8 @@
 {
 	"name": "app",
-	"repositories": [
-		{
-			"type": "pear",
-			"url": "http://pear.cakephp.org"
-		}
-	],
 	"require": {
 		"composer/installers": "dev-master",
-		"pear-cakephp/cakephp": ">=2.4.0",
+		"cakephp/cakephp": ">=2.5.0",
 		"components/jquery": "1.*",
 		"twitter/bootstrap": "3.*",
 		"slywalker/boost_cake": "*",

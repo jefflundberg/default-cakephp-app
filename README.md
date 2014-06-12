@@ -45,7 +45,7 @@ Refer to [http://book.cakephp.org/2.0/en/installation/advanced-installation.html
 * Edit app/webroot/index.php. Replace CAKE_CORE_INCLUDE_PATH (around line 55)
 
 ```php
-define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'lib' . DS . 'pear-pear.cakephp.org' . DS . 'CakePHP');
+define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'lib' . DS . 'cakephp' . DS . 'cakephp');
 ```
 
 * Edit app/Config/bootstrap.php. Add the following
