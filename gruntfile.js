@@ -77,7 +77,7 @@ module.exports = function(grunt){
 		copyto: {
 			fontawesome: {
 				files: [
-					{cwd: 'lib/fortawesome/font-awesome/', src: 'fonts/*.*', dest: 'app/webroot/'}
+					{cwd: 'lib/fortawesome/font-awesome/', src: 'fonts/*.*', dest: 'app/webroot/', expand: true}
 				]
 			}
 			// bootstrap: {
